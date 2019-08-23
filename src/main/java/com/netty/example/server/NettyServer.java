@@ -13,6 +13,7 @@ import io.netty.handler.logging.LoggingHandler;
 /**
  * 1 http服务器
  * 2 长连接
+ * 3 底层传输工具
  */
 
 public class NettyServer {
