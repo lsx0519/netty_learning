@@ -1,0 +1,10 @@
+
+§%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú7
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÇÍÕšüÿÿÿÿ
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ù¥Îúÿÿÿÿ
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(üÂ°Ë
+O
+squid:S106 "9Replace this use of System.out or System.err by a logger.(È°Œæ
+˜squid:S1186."€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“–ış
