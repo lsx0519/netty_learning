@@ -1,5 +1,6 @@
 package com.netty.example.server.initializer;
 
+import com.netty.example.server.handler.MyChatServerHandler;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -29,6 +30,6 @@ public class MyChatServerInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new DelimiterBasedFrameDecoder(4096, Delimiters.lineDelimiter()));
         pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));
         pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
-        pipeline.addLast(null);
+        pipeline.addLast(new MyChatServerHandler());
     }
 }

@@ -1,4 +1,4 @@
-package com.netty.example.client;
+package com.netty.example.client.handler;
 
 /**
  * \* Created with IntelliJ IDEA.

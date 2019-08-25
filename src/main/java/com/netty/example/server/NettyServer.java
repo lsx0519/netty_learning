@@ -1,6 +1,7 @@
 package com.netty.example.server;
 
 import com.netty.example.server.handler.EchoServerHandler;
+import com.netty.example.server.initializer.MyChatServerInitializer;
 import com.netty.example.server.initializer.TestHttpServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
@@ -32,7 +33,7 @@ public class NettyServer {
                     // 是给服务端收到新的请求的时候处理用的
                     /*.handler(new LoggingHandler(LogLevel.INFO))*/
                     // 是给新创建的连接用的  处理新创建的 SocketChannel
-                    .childHandler(new TestHttpServerInitializer());
+                    .childHandler(new MyChatServerInitializer());
             ChannelFuture channelFuture = serverBootstrap.bind(8080).sync();
 
             channelFuture.channel().closeFuture().sync();
