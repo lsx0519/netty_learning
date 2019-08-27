@@ -28,16 +28,15 @@ public class NioTest04 {
 
         while (true) {
             buffer.clear();
-
+            System.out.println("position:" + buffer.position() + ",limit:" + buffer.limit());
             int read = inputChannel.read(buffer);
-
-            System.out.println(read);
 
             if (read == -1) {
                 break;
             }
-
+            System.out.println("position:" + buffer.position() + ",limit:" + buffer.limit());
             buffer.flip();
+            System.out.println("position:" + buffer.position() + ",limit:" + buffer.limit());
 
             outputChannel.write(buffer);
         }
