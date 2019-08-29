@@ -11,6 +11,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleStateHandler;
 
 /**
  * 1 http服务器
@@ -53,6 +54,7 @@ public class NettyServer {
             ChannelPipeline channelPipeline = ch.pipeline();
             channelPipeline.addLast(new LoggingHandler(LogLevel.INFO));
             channelPipeline.addLast(new EchoServerHandler());
+            channelPipeline.addLast(new IdleStateHandler(3,6,7));
         }
     }
 }

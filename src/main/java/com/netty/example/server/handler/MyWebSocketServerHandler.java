@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
  * \* @Date: 2019/8/23
  * \* @Time: 9:23
  * \* To change this template use File | Settings | File Templates.
- * \* Description:
+ * \* Description: websocket通信  客户端代码在webapp目录下
  * \
  */
 public class MyWebSocketServerHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
